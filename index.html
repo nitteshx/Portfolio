@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nitesh Kumar | AI & ML Engineer | CSE @ NST Pune</title>
+  <meta name="description" content="Portfolio of Nitesh Kumar — CSE (AI & ML) student at NST Pune, Python engineer, CLI & Git craftsman building next-generation intelligent systems.">
+  <meta name="keywords" content="Nitesh Kumar, AI, ML, Python, CLI, Git, NST Pune, Newton School of Technology, Portfolio, Software Engineer">
+  <meta name="author" content="Nitesh Kumar">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  
+  <!-- Premium Fonts: Syne (Noomo Labs style bold grotesque display) + Space Grotesk + JetBrains Mono (CLI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+
+  <!-- Ambient Glowing Background Canvas (Newly AI / Cogniwave Style) -->
+  <canvas id="ambient-canvas"></canvas>
+  <div class="ambient-glow glow-cyan"></div>
+  <div class="ambient-glow glow-purple"></div>
+  <div class="ambient-glow glow-blue"></div>
+
+  <!-- Interactive Floating Glass Navbar -->
+  <header class="navbar-wrapper">
+    <nav class="navbar" id="navbar">
+      <a href="#hero" class="brand-logo" aria-label="Home">
+        <span class="logo-symbol">NK</span>
+        <span class="logo-text">nitesh<span class="text-accent">.ai</span></span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#about" class="nav-item">About</a>
+        <a href="#skills" class="nav-item">Skills</a>
+        <a href="#terminal" class="nav-item nav-terminal-tag">CLI <span class="pulse-dot"></span></a>
+        <a href="#projects" class="nav-item">Projects</a>
+        <a href="#glossary" class="nav-item">Ecosystem</a>
+        <a href="#contact" class="nav-item">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <a href="mailto:niteshh.kumar@icloud.com" class="btn-nav-cta">
+          <i data-lucide="mail"></i>
+          <span>Let's Talk</span>
+        </a>
+        <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO SECTION (Newly AI 3D Layout + Noomo Labs Kinetic Headline) -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-container">
+        
+        <div class="hero-content">
+          <!-- Newly AI style pill badge with pulsing status -->
+          <div class="status-pill" data-scramble="true">
+            <span class="status-indicator"></span>
+            <span class="status-text">B.Tech CSE (AI & ML) • <a href="https://www.newtonschool.co/" target="_blank" rel="noopener noreferrer" class="link-inline glow-link">NST Pune '26</a></span>
+            <span class="pill-sparkle">✨</span>
+          </div>
+
+          <!-- Noomo Labs Bold Oversized Kinetic Typography -->
+          <h1 class="hero-headline">
+            <span class="headline-line">ENGINEERING</span>
+            <span class="headline-line gradient-text scramble-hover" data-original="INTELLIGENCE">INTELLIGENCE</span>
+            <span class="headline-line flex-line">
+              <span>THROUGH</span>
+              <span class="cli-badge scramble-hover" data-original="CODE & CLI">CODE & CLI</span>
+            </span>
+          </h1>
+
+          <p class="hero-subtext">
+            Hi, I'm <strong class="text-white clickable-word" data-link="https://www.linkedin.com/in/nitesh-kumar-nst/" title="View LinkedIn Profile">Nitesh Kumar</strong> — an AI & Machine Learning engineer starting my journey at <a href="https://www.newtonschool.co/" target="_blank" rel="noopener noreferrer" class="clickable-term" data-tooltip="Newton School of Technology, Pune">NST Pune</a>. Specializing in high-performance <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer" class="clickable-term" data-tooltip="Python Language & Ecosystem">Python</a>, robust <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer" class="clickable-term" data-tooltip="Version Control & Collaboration">Git</a> architectures, and sleek terminal <a href="#terminal" class="clickable-term" data-tooltip="Command Line Interface">CLI</a> tooling.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary glow-btn">
+              <span>Explore Projects</span>
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+            <a href="#terminal" class="btn btn-secondary glass-btn">
+              <i data-lucide="terminal"></i>
+              <span>Launch Terminal</span>
+            </a>
+            <button class="btn btn-ghost copy-email-btn" id="hero-copy-email" data-email="niteshh.kumar@icloud.com" title="Click to copy email">
+              <i data-lucide="copy"></i>
+              <span>Copy Email</span>
+            </button>
+          </div>
+
+          <!-- Quick interactive stats / pills -->
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <span class="metric-num scramble-hover" data-original="2026">2026</span>
+              <span class="metric-label">NST Pune Cohort</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-num">3+</span>
+              <span class="metric-label">Core Stacks (Git/CLI/Python)</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-num">100%</span>
+              <span class="metric-label">Open Source & AI Focus</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- HERO 3D INTERACTIVE CARD (Newly AI Style 3D floating perspective) -->
+        <div class="hero-visual">
+          <div class="card-3d-wrapper" id="hero-3d-card">
+            <div class="glass-3d-card">
+              <!-- Header bar of the holographic card -->
+              <div class="card-head">
+                <div class="traffic-lights">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <div class="card-title-pill">nitesh_kumar_core.py</div>
+                <div class="card-status-badge">ONLINE</div>
+              </div>
+
+              <!-- Visual code & neural pulse inside card -->
+              <div class="card-body">
+                <div class="code-stream">
+                  <p class="code-line"><span class="c-keyword">import</span> <a href="https://pytorch.org/" target="_blank" rel="noopener noreferrer" class="c-module clickable-term" data-tooltip="Deep Learning Framework">torch</a></p>
+                  <p class="code-line"><span class="c-keyword">from</span> <a href="https://www.newtonschool.co/" target="_blank" rel="noopener noreferrer" class="c-module clickable-term" data-tooltip="NST Pune AI Labs">nst_pune</a> <span class="c-keyword">import</span> <span class="c-var">AIMLEngineer</span></p>
+                  <p class="code-line mt-sm"><span class="c-comment"># Initializing developer profile</span></p>
+                  <p class="code-line">nitesh = <span class="c-func">AIMLEngineer</span>(</p>
+                  <p class="code-line indent">name=<span class="c-str">"Nitesh Kumar"</span>,</p>
+                  <p class="code-line indent">institute=<span class="c-str">"NST Pune (2026)"</span>,</p>
+                  <p class="code-line indent">passions=[<span class="c-str">"AI & ML"</span>, <span class="c-str">"Python"</span>, <span class="c-str">"CLI"</span>, <span class="c-str">"Git"</span>],</p>
+                  <p class="code-line indent">email=<a href="mailto:niteshh.kumar@icloud.com" class="c-str clickable-term" data-tooltip="Click to compose email">"niteshh.kumar@icloud.com"</a></p>
+                  <p class="code-line">)</p>
+                  <p class="code-line mt-sm"><span class="c-var">nitesh</span>.<span class="c-func">build_future</span>(scale=<span class="c-str">"high"</span>)</p>
+                </div>
+
+                <!-- Floating Holographic Feature Chips (Newly AI 3D floating badges) -->
+                <div class="floating-chip chip-1">
+                  <i data-lucide="git-branch" class="chip-icon text-cyan"></i>
+                  <div>
+                    <span class="chip-title">Git & Version Control</span>
+                    <span class="chip-sub">Production CI/CD Workflows</span>
+                  </div>
+                </div>
+
+                <div class="floating-chip chip-2">
+                  <i data-lucide="terminal" class="chip-icon text-violet"></i>
+                  <div>
+                    <span class="chip-title">Unix / CLI Powerhouse</span>
+                    <span class="chip-sub">Automations & Scripting</span>
+                  </div>
+                </div>
+
+                <div class="floating-chip chip-3">
+                  <i data-lucide="cpu" class="chip-icon text-emerald"></i>
+                  <div>
+                    <span class="chip-title">Python • AI & ML</span>
+                    <span class="chip-sub">CSE @ NST Pune</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card footer glow bar -->
+              <div class="card-footer-glow">
+                <span class="glow-bar"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- KINETIC MARQUEE BANNER (Noomo Labs Style Fast Ticker) -->
+    <div class="marquee-strip">
+      <div class="marquee-track">
+        <div class="marquee-item"><span>PYTHON DEVELOPER</span> <i data-lucide="sparkle"></i></div>
+        <div class="marquee-item"><span>CSE (AI & ML)</span> <i data-lucide="sparkle"></i></div>
+        <div class="marquee-item"><span>NST PUNE '26</span> <i data-lucide="sparkle"></i></div>
+        <div class="marquee-item"><span>CLI ARCHITECTURE</span> <i data-lucide="sparkle"></i></div>
+        <div class="marquee-item"><span>GIT VERSIONING</span> <i data-lucide="sparkle"></i></div>
+        <div class="marquee-item"><span>NEURAL NETWORKS</span> <i data-lucide="sparkle"></i></div>
+        <div class="marquee-item"><span>ALGORITHMIC THINKING</span> <i data-lucide="sparkle"></i></div>
+        <!-- Duplicate for infinite loop -->
+        <div class="marquee-item"><span>PYTHON DEVELOPER</span> <i data-lucide="sparkle"></i></div>
+        <div class="marquee-item"><span>CSE (AI & ML)</span> <i data-lucide="sparkle"></i></div>
+        <div class="marquee-item"><span>NST PUNE '26</span> <i data-lucide="sparkle"></i></div>
+        <div class="marquee-item"><span>CLI ARCHITECTURE</span> <i data-lucide="sparkle"></i></div>
+        <div class="marquee-item"><span>GIT VERSIONING</span> <i data-lucide="sparkle"></i></div>
+        <div class="marquee-item"><span>NEURAL NETWORKS</span> <i data-lucide="sparkle"></i></div>
+        <div class="marquee-item"><span>ALGORITHMIC THINKING</span> <i data-lucide="sparkle"></i></div>
+      </div>
+    </div>
+
+    <!-- ABOUT SECTION (Academic & Engineering Foundation) -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-badge">
+          <i data-lucide="user-check"></i>
+          <span>BIOGRAPHY & BACKGROUND</span>
+        </div>
+        
+        <h2 class="section-title">
+          Driven by Curiosity, <span class="gradient-text">Engineered for Scale</span>
+        </h2>
+        <p class="section-subtitle">
+          From crafting CLI automation scripts to mastering deep learning algorithms at NST Pune.
+        </p>
+
+        <div class="about-grid">
+          <!-- Main Narrative Card -->
+          <div class="bento-card about-main-card">
+            <div class="card-icon-box">
+              <i data-lucide="graduation-cap"></i>
+            </div>
+            <h3>Education & Ambition</h3>
+            <p>
+              I am pursuing my <strong>B.Tech in Computer Science and Engineering with a specialization in Artificial Intelligence & Machine Learning (CSE AI & ML)</strong> at <a href="https://www.newtonschool.co/" target="_blank" rel="noopener noreferrer" class="link-inline glow-link">Newton School of Technology (NST), Pune</a>, having started my engineering in <strong>2026</strong>.
+            </p>
+            <p>
+              My philosophy combines rigorous theoretical computer science with pragmatic hands-on software craft. I believe true engineering power lies at the intersection of <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer" class="clickable-term" data-tooltip="Explore Python.org">Pythonic systems</a>, the raw speed of the <a href="https://en.wikipedia.org/wiki/Command-line_interface" target="_blank" rel="noopener noreferrer" class="clickable-term" data-tooltip="Command Line Power">Terminal CLI</a>, and structured version management with <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer" class="clickable-term" data-tooltip="Git Documentation">Git</a>.
+            </p>
+            
+            <div class="about-highlights">
+              <div class="highlight-chip">
+                <i data-lucide="map-pin" class="text-cyan"></i>
+                <span>Pune, Maharashtra, India</span>
+              </div>
+              <div class="highlight-chip">
+                <i data-lucide="book-open" class="text-violet"></i>
+                <span>NST Pune — AI & ML Focus</span>
+              </div>
+              <div class="highlight-chip">
+                <i data-lucide="award" class="text-emerald"></i>
+                <span>Class of 2026</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Fact Bento 1: Contact Quick Launch -->
+          <div class="bento-card about-contact-card">
+            <div class="card-icon-box">
+              <i data-lucide="send"></i>
+            </div>
+            <h3>Direct Contact</h3>
+            <p class="text-muted">Reach out directly for AI collaborations, engineering hackathons, or open-source projects.</p>
+            
+            <div class="contact-pill-list">
+              <a href="mailto:niteshh.kumar@icloud.com" class="contact-pill" title="Send email to Nitesh">
+                <i data-lucide="mail" class="text-cyan"></i>
+                <div class="pill-info">
+                  <span class="label">iCloud Mail</span>
+                  <span class="value">niteshh.kumar@icloud.com</span>
+                </div>
+                <i data-lucide="external-link" class="pill-arrow"></i>
+              </a>
+
+              <a href="https://www.linkedin.com/in/nitesh-kumar-nst/" target="_blank" rel="noopener noreferrer" class="contact-pill" title="Connect on LinkedIn">
+                <i data-lucide="linkedin" class="text-violet"></i>
+                <div class="pill-info">
+                  <span class="label">LinkedIn Profile</span>
+                  <span class="value">nitesh-kumar-nst</span>
+                </div>
+                <i data-lucide="external-link" class="pill-arrow"></i>
+              </a>
+            </div>
+
+            <div class="copy-box">
+              <button class="btn btn-secondary btn-full copy-email-btn" data-email="niteshh.kumar@icloud.com">
+                <i data-lucide="copy"></i>
+                <span>Copy Email Address</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Bento 3: Tech Creed -->
+          <div class="bento-card about-creed-card">
+            <div class="card-icon-box">
+              <i data-lucide="terminal-square"></i>
+            </div>
+            <h3>Core Engineering Pillars</h3>
+            <div class="pillars-list">
+              <div class="pillar-row">
+                <div class="pillar-bullet text-cyan">01</div>
+                <div>
+                  <strong>Precision Command Line (CLI)</strong>
+                  <p class="text-muted">Mastering Unix pipes, automation flags, and terminal velocity to boost productivity.</p>
+                </div>
+              </div>
+              <div class="pillar-row">
+                <div class="pillar-bullet text-violet">02</div>
+                <div>
+                  <strong>Version Integrity (Git)</strong>
+                  <p class="text-muted">Atomic commits, interactive rebases, branching models, and collaborative repo governance.</p>
+                </div>
+              </div>
+              <div class="pillar-row">
+                <div class="pillar-bullet text-emerald">03</div>
+                <div>
+                  <strong>Python & Intelligent Models</strong>
+                  <p class="text-muted">Writing idiomatic Python, building mathematical data pipelines, and deploying neural nets.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE SKILLS SECTION (Bento Grid: Git, CLI, Python, AI/ML) -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-badge">
+          <i data-lucide="layers"></i>
+          <span>TECHNICAL SCALE & PROFICIENCY</span>
+        </div>
+        
+        <h2 class="section-title">
+          Mastered Stacks: <span class="gradient-text">Git, CLI & Python</span>
+        </h2>
+        <p class="section-subtitle">
+          Every tool is an extension of thought. Click on any skill card or keyword to inspect documentation and live applications.
+        </p>
+
+        <div class="skills-bento-grid">
+          
+          <!-- SKILL 1: PYTHON -->
+          <div class="bento-card skill-card" data-tilt="true">
+            <div class="skill-header">
+              <div class="skill-icon python-glow">
+                <i data-lucide="code-2"></i>
+              </div>
+              <div class="skill-meta">
+                <span class="skill-level">Primary Language</span>
+                <h3><a href="https://www.python.org/" target="_blank" rel="noopener noreferrer" class="title-link">Python 3.x</a></h3>
+              </div>
+            </div>
+            <p class="skill-desc">
+              Writing clean, modular, and performant Python. Building data structures, backend micro-services, algorithmic automation, and AI training pipelines.
+            </p>
+            <div class="tags-container">
+              <a href="https://docs.python.org/3/" target="_blank" rel="noopener noreferrer" class="tech-tag" data-tooltip="Core Python 3 Standard Library">Python OOP</a>
+              <a href="https://numpy.org/" target="_blank" rel="noopener noreferrer" class="tech-tag" data-tooltip="Numerical Computing">NumPy</a>
+              <a href="https://pandas.pydata.org/" target="_blank" rel="noopener noreferrer" class="tech-tag" data-tooltip="Data Analysis & Manipulation">Pandas</a>
+              <a href="https://pytorch.org/" target="_blank" rel="noopener noreferrer" class="tech-tag" data-tooltip="Deep Learning Framework">PyTorch</a>
+              <a href="https://fastapi.tiangolo.com/" target="_blank" rel="noopener noreferrer" class="tech-tag" data-tooltip="High-Performance Modern APIs">FastAPI</a>
+              <a href="https://scikit-learn.org/" target="_blank" rel="noopener noreferrer" class="tech-tag" data-tooltip="Machine Learning in Python">Scikit-Learn</a>
+            </div>
+            <div class="skill-progress-bar">
+              <div class="progress-fill fill-cyan" style="width: 92%;"></div>
+            </div>
+            <span class="progress-label">Scale: Advanced Engineering</span>
+          </div>
+
+          <!-- SKILL 2: CLI (Command Line Interface) -->
+          <div class="bento-card skill-card" data-tilt="true">
+            <div class="skill-header">
+              <div class="skill-icon cli-glow">
+                <i data-lucide="terminal"></i>
+              </div>
+              <div class="skill-meta">
+                <span class="skill-level">System & Environment</span>
+                <h3><a href="https://en.wikipedia.org/wiki/Command-line_interface" target="_blank" rel="noopener noreferrer" class="title-link">Command Line (CLI)</a></h3>
+              </div>
+            </div>
+            <p class="skill-desc">
+              Operating inside terminal environments with high efficiency. Crafting shell scripts, process orchestration, piped commands, and custom dev-tools.
+            </p>
+            <div class="tags-container">
+              <a href="https://www.gnu.org/software/bash/" target="_blank" rel="noopener noreferrer" class="tech-tag" data-tooltip="Bourne Again Shell">Bash Scripting</a>
+              <a href="https://www.zsh.org/" target="_blank" rel="noopener noreferrer" class="tech-tag" data-tooltip="Z Shell & Custom Oh-My-Zsh">Zsh</a>
+              <a href="https://www.kernel.org/" target="_blank" rel="noopener noreferrer" class="tech-tag" data-tooltip="Linux Kernel & System Administration">Linux/Unix Utilities</a>
+              <a href="https://neovim.io/" target="_blank" rel="noopener noreferrer" class="tech-tag" data-tooltip="Hyperextensible Vim-based text editor">Neovim / Vim</a>
+              <a href="https://github.com/tmux/tmux" target="_blank" rel="noopener noreferrer" class="tech-tag" data-tooltip="Terminal Multiplexer">tmux</a>
+              <a href="https://www.ssh.com/academy/ssh" target="_blank" rel="noopener noreferrer" class="tech-tag" data-tooltip="Secure Shell Remote Sessions">SSH & Remote Ops</a>
+            </div>
+            <div class="skill-progress-bar">
+              <div class="progress-fill fill-violet" style="width: 88%;"></div>
+            </div>
+            <span class="progress-label">Scale: Terminal Native</span>
+          </div>
+
+          <!-- SKILL 3: GIT & VERSION CONTROL -->
+          <div class="bento-card skill-card" data-tilt="true">
+            <div class="skill-header">
+              <div class="skill-icon git-glow">
+                <i data-lucide="git-merge"></i>
+              </div>
+              <div class="skill-meta">
+                <span class="skill-level">Version Control & Collaboration</span>
+                <h3><a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer" class="title-link">Git & GitHub</a></h3>
+              </div>
+            </div>
+            <p class="skill-desc">
+              Robust source code management. Atomic commit hygiene, interactive rebasing, merge conflict resolution, pull request reviews, and GitHub Actions CI/CD.
+            </p>
+            <div class="tags-container">
+              <a href="https://git-scm.com/docs/git-branch" target="_blank" rel="noopener noreferrer" class="tech-tag" data-tooltip="Branch Management & Trunk Flow">Branching Strategies</a>
+              <a href="https://git-scm.com/docs/git-rebase" target="_blank" rel="noopener noreferrer" class="tech-tag" data-tooltip="Interactive Commit Cleanups">Interactive Rebase</a>
+              <a href="https://github.com/features/actions" target="_blank" rel="noopener noreferrer" class="tech-tag" data-tooltip="Automated Workflows & Testing">GitHub Actions</a>
+              <a href="https://docs.github.com/en/pull-requests" target="_blank" rel="noopener noreferrer" class="tech-tag" data-tooltip="Code Review Protocols">PR Workflows</a>
+              <a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks" target="_blank" rel="noopener noreferrer" class="tech-tag" data-tooltip="Pre-commit and Pre-push Scripts">Git Hooks</a>
+              <a href="https://git-lfs.com/" target="_blank" rel="noopener noreferrer" class="tech-tag" data-tooltip="Large File Storage for AI Weights">Git LFS</a>
+            </div>
+            <div class="skill-progress-bar">
+              <div class="progress-fill fill-emerald" style="width: 90%;"></div>
+            </div>
+            <span class="progress-label">Scale: Production Ready</span>
+          </div>
+
+          <!-- SKILL 4: AI & MACHINE LEARNING -->
+          <div class="bento-card skill-card" data-tilt="true">
+            <div class="skill-header">
+              <div class="skill-icon ai-glow">
+                <i data-lucide="brain"></i>
+              </div>
+              <div class="skill-meta">
+                <span class="skill-level">Specialization (NST Pune)</span>
+                <h3><a href="https://en.wikipedia.org/wiki/Artificial_intelligence" target="_blank" rel="noopener noreferrer" class="title-link">AI & Machine Learning</a></h3>
+              </div>
+            </div>
+            <p class="skill-desc">
+              Foundational and applied intelligence. Supervised & unsupervised learning, gradient descent mathematics, transformer architectures, and computer vision.
+            </p>
+            <div class="tags-container">
+              <a href="https://en.wikipedia.org/wiki/Neural_network" target="_blank" rel="noopener noreferrer" class="tech-tag" data-tooltip="Artificial Neural Networks">Deep Learning</a>
+              <a href="https://huggingface.co/" target="_blank" rel="noopener noreferrer" class="tech-tag" data-tooltip="Transformers & Open Source Models">Hugging Face</a>
+              <a href="https://en.wikipedia.org/wiki/Natural_language_processing" target="_blank" rel="noopener noreferrer" class="tech-tag" data-tooltip="NLP & Text Processing">NLP</a>
+              <a href="https://opencv.org/" target="_blank" rel="noopener noreferrer" class="tech-tag" data-tooltip="Open Source Computer Vision">Computer Vision</a>
+              <a href="https://en.wikipedia.org/wiki/Vector_database" target="_blank" rel="noopener noreferrer" class="tech-tag" data-tooltip="Embeddings & Semantic Search">Vector Embeddings</a>
+              <a href="https://jupyter.org/" target="_blank" rel="noopener noreferrer" class="tech-tag" data-tooltip="Interactive Computational Notebooks">Jupyter Labs</a>
+            </div>
+            <div class="skill-progress-bar">
+              <div class="progress-fill fill-cyan" style="width: 85%;"></div>
+            </div>
+            <span class="progress-label">Scale: Active R&D</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE CLI TERMINAL PLAYGROUND (Highlighting CLI, Git, and Python) -->
+    <section id="terminal" class="section terminal-section">
+      <div class="container">
+        <div class="section-badge">
+          <i data-lucide="terminal"></i>
+          <span>LIVE INTERACTIVE SHELL</span>
+        </div>
+        
+        <h2 class="section-title">
+          Test My Skills in the <span class="gradient-text">Interactive Terminal</span>
+        </h2>
+        <p class="section-subtitle">
+          Type commands like <code class="code-badge">python --version</code>, <code class="code-badge">git status</code>, <code class="code-badge">skills</code>, or <code class="code-badge">help</code> directly below!
+        </p>
+
+        <div class="terminal-window">
+          <div class="terminal-topbar">
+            <div class="terminal-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="terminal-title">nitesh@nst-pune-macbook:~ (zsh)</div>
+            <div class="terminal-actions">
+              <button class="terminal-btn" id="btn-clear-term" title="Clear terminal screen">clear</button>
+            </div>
+          </div>
+
+          <div class="terminal-body" id="terminal-output">
+            <div class="term-line">
+              <span class="term-greeting">⚡ Welcome to Nitesh Kumar's interactive portfolio shell. Type <strong class="term-cmd-highlight">help</strong> to view available commands.</span>
+            </div>
+            <div class="term-line">
+              <span class="term-prompt">nitesh@nst:~$</span> <span class="term-cmd">whoami</span>
+            </div>
+            <div class="term-result">
+              Nitesh Kumar — CSE (AI & ML) student at Newton School of Technology (NST Pune), Batch 2026.<br>
+              Skills: Git (Expert), CLI (Native), Python (Advanced), AI & ML (Core).
+            </div>
+          </div>
+
+          <div class="terminal-input-row">
+            <span class="term-prompt">nitesh@nst:~$</span>
+            <input type="text" id="terminal-input" autocomplete="off" spellcheck="false" placeholder="Type a command (e.g. help, skills, projects, contact, git, python)...">
+            <button class="terminal-submit-btn" id="terminal-submit-btn" aria-label="Send command">
+              <i data-lucide="corner-down-left"></i>
+            </button>
+          </div>
+
+          <div class="terminal-quick-chips">
+            <span class="quick-chip-label">Quick suggestions:</span>
+            <button class="quick-cmd" data-cmd="help">help</button>
+            <button class="quick-cmd" data-cmd="skills">skills</button>
+            <button class="quick-cmd" data-cmd="projects">projects</button>
+            <button class="quick-cmd" data-cmd="git status">git status</button>
+            <button class="quick-cmd" data-cmd="python --version">python --version</button>
+            <button class="quick-cmd" data-cmd="about">about</button>
+            <button class="quick-cmd" data-cmd="contact">contact</button>
+            <button class="quick-cmd" data-cmd="clear">clear</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION (Newly AI Bento Showcase with Live Clickable Links) -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <div class="section-badge">
+          <i data-lucide="folder-git-2"></i>
+          <span>ENGINEERING SHOWCASE</span>
+        </div>
+        
+        <h2 class="section-title">
+          Featured Projects & <span class="gradient-text">Open Source Work</span>
+        </h2>
+        <p class="section-subtitle">
+          Real software systems built with Python, CLI automation, and intelligent models. Click any project card to view repository or live demo.
+        </p>
+
+        <div class="projects-grid">
+          
+          <!-- PROJECT 1 -->
+          <article class="bento-card project-card" data-tilt="true">
+            <div class="project-header">
+              <div class="project-tag-pill">AI & ML • Python</div>
+              <div class="project-links">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="icon-link" title="View Source on GitHub">
+                  <i data-lucide="github"></i>
+                </a>
+                <a href="https://huggingface.co" target="_blank" rel="noopener noreferrer" class="icon-link" title="Open Live Model">
+                  <i data-lucide="external-link"></i>
+                </a>
+              </div>
+            </div>
+            
+            <h3 class="project-title">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer">CogniFlow Agent</a>
+            </h3>
+            <p class="project-description">
+              An autonomous cognitive multi-agent pipeline built with <strong>Python</strong>. Features vector memory retrieval, dynamic prompt synthesis, and real-time inference streaming.
+            </p>
+
+            <div class="project-tech-stack">
+              <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer" class="mini-tag">Python 3.12</a>
+              <a href="https://pytorch.org/" target="_blank" rel="noopener noreferrer" class="mini-tag">PyTorch</a>
+              <a href="https://www.trychroma.com/" target="_blank" rel="noopener noreferrer" class="mini-tag">ChromaDB</a>
+              <a href="https://fastapi.tiangolo.com/" target="_blank" rel="noopener noreferrer" class="mini-tag">FastAPI</a>
+            </div>
+
+            <div class="project-preview-mockup">
+              <div class="mockup-code">
+                <span class="m-comment"># Initializing CogniFlow autonomous runtime</span><br>
+                agent = <span class="m-func">CognitiveAgent</span>(model=<span class="m-str">"neural-7b"</span>)<br>
+                response = agent.<span class="m-func">synthesize</span>(stream=<span class="m-bool">True</span>)
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2 -->
+          <article class="bento-card project-card" data-tilt="true">
+            <div class="project-header">
+              <div class="project-tag-pill">CLI • Systems • Git</div>
+              <div class="project-links">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="icon-link" title="View Source on GitHub">
+                  <i data-lucide="github"></i>
+                </a>
+                <a href="#terminal" class="icon-link" title="Test in CLI Playground">
+                  <i data-lucide="terminal"></i>
+                </a>
+              </div>
+            </div>
+            
+            <h3 class="project-title">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitPulse CLI</a>
+            </h3>
+            <p class="project-description">
+              A high-speed terminal utility for developers. Analyzes commit history velocity, spots merge bottlenecks, and automates structured conventional git commits.
+            </p>
+
+            <div class="project-tech-stack">
+              <a href="https://en.wikipedia.org/wiki/Command-line_interface" target="_blank" rel="noopener noreferrer" class="mini-tag">Unix CLI</a>
+              <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer" class="mini-tag">Python Click</a>
+              <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer" class="mini-tag">Git API</a>
+              <a href="https://rich.readthedocs.io/" target="_blank" rel="noopener noreferrer" class="mini-tag">Rich Terminal UI</a>
+            </div>
+
+            <div class="project-preview-mockup">
+              <div class="mockup-code">
+                $ gitpulse analyze --repo ./portfolio<br>
+                <span class="m-success">✓ 142 commits parsed in 38ms</span><br>
+                <span class="m-cyan">→ Health Score: 98/100 (Clean Git Trees)</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3 -->
+          <article class="bento-card project-card" data-tilt="true">
+            <div class="project-header">
+              <div class="project-tag-pill">Computer Vision • AI</div>
+              <div class="project-links">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="icon-link" title="View Source on GitHub">
+                  <i data-lucide="github"></i>
+                </a>
+                <a href="https://opencv.org" target="_blank" rel="noopener noreferrer" class="icon-link" title="Visit OpenCV">
+                  <i data-lucide="external-link"></i>
+                </a>
+              </div>
+            </div>
+            
+            <h3 class="project-title">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer">NeuroVision Edge</a>
+            </h3>
+            <p class="project-description">
+              Lightweight convolutional network for real-time edge object detection and gesture tracking. Optimized for low-latency inference on embedded devices.
+            </p>
+
+            <div class="project-tech-stack">
+              <a href="https://opencv.org/" target="_blank" rel="noopener noreferrer" class="mini-tag">OpenCV</a>
+              <a href="https://pytorch.org/" target="_blank" rel="noopener noreferrer" class="mini-tag">TorchVision</a>
+              <a href="https://numpy.org/" target="_blank" rel="noopener noreferrer" class="mini-tag">NumPy</a>
+              <a href="https://onnx.ai/" target="_blank" rel="noopener noreferrer" class="mini-tag">ONNX Runtime</a>
+            </div>
+
+            <div class="project-preview-mockup">
+              <div class="mockup-code">
+                <span class="m-cyan">[FPS: 60.2]</span> Objects Detected: 4<br>
+                Inference Latency: 12.4ms • TensorRT Engine
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 4 -->
+          <article class="bento-card project-card" data-tilt="true">
+            <div class="project-header">
+              <div class="project-tag-pill">Automation • Bash / Python</div>
+              <div class="project-links">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="icon-link" title="View Source on GitHub">
+                  <i data-lucide="github"></i>
+                </a>
+                <a href="#terminal" class="icon-link" title="Try in Terminal">
+                  <i data-lucide="terminal"></i>
+                </a>
+              </div>
+            </div>
+            
+            <h3 class="project-title">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer">TermFlow Shell Orchestrator</a>
+            </h3>
+            <p class="project-description">
+              An intelligent terminal productivity layer integrating fuzzy search, auto-bookmarking of directories, and automated Git staging macros.
+            </p>
+
+            <div class="project-tech-stack">
+              <a href="https://www.zsh.org/" target="_blank" rel="noopener noreferrer" class="mini-tag">Zsh / Bash</a>
+              <a href="https://github.com/junegunn/fzf" target="_blank" rel="noopener noreferrer" class="mini-tag">fzf Integration</a>
+              <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer" class="mini-tag">Python daemon</a>
+            </div>
+
+            <div class="project-preview-mockup">
+              <div class="mockup-code">
+                $ termflow jump ai-workspace<br>
+                <span class="m-success">→ Activated venv: (pytorch-py312)</span><br>
+                <span class="m-comment">Switched branch: feature/neural-kernel</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CLICKABLE TECH DIRECTORY & GLOSSARY (Satisfying "make sure word should clickable to land on another web or any thing") -->
+    <section id="glossary" class="section glossary-section">
+      <div class="container">
+        <div class="section-badge">
+          <i data-lucide="mouse-pointer-click"></i>
+          <span>INTERACTIVE KNOWLEDGE ECOSYSTEM</span>
+        </div>
+        
+        <h2 class="section-title">
+          Clickable Tech Stack & <span class="gradient-text">Ecosystem Directory</span>
+        </h2>
+        <p class="section-subtitle">
+          Every keyword below is interactive and directly links to official documentation, tools, or learning resources.
+        </p>
+
+        <div class="bento-card glossary-card">
+          <div class="glossary-chips-cloud">
+            <a href="https://www.newtonschool.co/" target="_blank" rel="noopener noreferrer" class="cloud-pill glow-cyan" title="Newton School of Technology, Pune">
+              <i data-lucide="graduation-cap"></i> <span>NST Pune</span>
+            </a>
+            <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer" class="cloud-pill glow-blue" title="Python Official Site">
+              <i data-lucide="code"></i> <span>Python 3.x</span>
+            </a>
+            <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer" class="cloud-pill glow-orange" title="Git Official SCM">
+              <i data-lucide="git-branch"></i> <span>Git SCM</span>
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Command-line_interface" target="_blank" rel="noopener noreferrer" class="cloud-pill glow-violet" title="Command Line Interface">
+              <i data-lucide="terminal"></i> <span>CLI Environments</span>
+            </a>
+            <a href="https://pytorch.org/" target="_blank" rel="noopener noreferrer" class="cloud-pill glow-pink" title="PyTorch Deep Learning">
+              <i data-lucide="cpu"></i> <span>PyTorch</span>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="cloud-pill" title="GitHub Code Hosting">
+              <i data-lucide="github"></i> <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/nitesh-kumar-nst/" target="_blank" rel="noopener noreferrer" class="cloud-pill glow-cyan" title="Nitesh Kumar's LinkedIn">
+              <i data-lucide="linkedin"></i> <span>LinkedIn Profile</span>
+            </a>
+            <a href="mailto:niteshh.kumar@icloud.com" class="cloud-pill" title="Compose iCloud Email">
+              <i data-lucide="mail"></i> <span>niteshh.kumar@icloud.com</span>
+            </a>
+            <a href="https://numpy.org/" target="_blank" rel="noopener noreferrer" class="cloud-pill" title="NumPy Computing">
+              <span>NumPy</span>
+            </a>
+            <a href="https://pandas.pydata.org/" target="_blank" rel="noopener noreferrer" class="cloud-pill" title="Pandas Library">
+              <span>Pandas</span>
+            </a>
+            <a href="https://scikit-learn.org/" target="_blank" rel="noopener noreferrer" class="cloud-pill" title="Scikit-Learn Machine Learning">
+              <span>Scikit-Learn</span>
+            </a>
+            <a href="https://huggingface.co/" target="_blank" rel="noopener noreferrer" class="cloud-pill glow-yellow" title="Hugging Face AI Community">
+              <span>Hugging Face 🤗</span>
+            </a>
+            <a href="https://neovim.io/" target="_blank" rel="noopener noreferrer" class="cloud-pill" title="Neovim Text Editor">
+              <span>Neovim</span>
+            </a>
+            <a href="https://www.linux.org/" target="_blank" rel="noopener noreferrer" class="cloud-pill" title="Linux Operating System">
+              <span>Linux</span>
+            </a>
+            <a href="https://fastapi.tiangolo.com/" target="_blank" rel="noopener noreferrer" class="cloud-pill" title="FastAPI Framework">
+              <span>FastAPI</span>
+            </a>
+            <a href="https://dribbble.com/shots/24277855-Noomo-Labs" target="_blank" rel="noopener noreferrer" class="cloud-pill glow-violet" title="Noomo Labs Typography Inspiration">
+              <span>Inspiration: Noomo Labs</span>
+            </a>
+            <a href="https://dribbble.com/shots/27333929-Newly-ai-app-creation-landing-page-web-design-3d-animation" target="_blank" rel="noopener noreferrer" class="cloud-pill glow-cyan" title="Newly AI Landing Design Inspiration">
+              <span>Inspiration: Newly AI</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION (Newly AI Glassmorphism Card + Direct Links) -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-badge">
+          <i data-lucide="message-square"></i>
+          <span>GET IN TOUCH</span>
+        </div>
+        
+        <h2 class="section-title">
+          Let’s Build the Future <span class="gradient-text">Together</span>
+        </h2>
+        <p class="section-subtitle">
+          Have an AI project, an open-source idea, or want to discuss engineering at NST Pune? My inbox is always open.
+        </p>
+
+        <div class="contact-box-wrapper">
+          <div class="contact-card-glass">
+            
+            <div class="contact-card-header">
+              <div class="avatar-holder">
+                <div class="avatar-ring">
+                  <div class="avatar-initials">NK</div>
+                </div>
+                <div class="online-dot"></div>
+              </div>
+
+              <div class="contact-personal-info">
+                <h3>Nitesh Kumar</h3>
+                <p>Computer Science & Engineering (AI & ML) • NST Pune '26</p>
+                <div class="contact-badges">
+                  <span class="badge-tag"><i data-lucide="map-pin"></i> Pune, India</span>
+                  <span class="badge-tag"><i data-lucide="sparkles"></i> Open for Collaborations</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-grid-links">
+              
+              <!-- Email Card -->
+              <div class="contact-method-card">
+                <div class="method-icon-box cyan-box">
+                  <i data-lucide="mail"></i>
+                </div>
+                <div class="method-details">
+                  <span class="method-name">Official iCloud Email</span>
+                  <a href="mailto:niteshh.kumar@icloud.com" class="method-value" title="Send email">niteshh.kumar@icloud.com</a>
+                </div>
+                <button class="btn-copy-action copy-email-btn" data-email="niteshh.kumar@icloud.com" title="Copy email address">
+                  <i data-lucide="copy"></i>
+                </button>
+              </div>
+
+              <!-- LinkedIn Card -->
+              <div class="contact-method-card">
+                <div class="method-icon-box violet-box">
+                  <i data-lucide="linkedin"></i>
+                </div>
+                <div class="method-details">
+                  <span class="method-name">Professional Network</span>
+                  <a href="https://www.linkedin.com/in/nitesh-kumar-nst/" target="_blank" rel="noopener noreferrer" class="method-value" title="Open LinkedIn Profile">
+                    linkedin.com/in/nitesh-kumar-nst
+                  </a>
+                </div>
+                <a href="https://www.linkedin.com/in/nitesh-kumar-nst/" target="_blank" rel="noopener noreferrer" class="btn-link-action" title="Visit LinkedIn">
+                  <i data-lucide="arrow-up-right"></i>
+                </a>
+              </div>
+
+              <!-- Institution Card -->
+              <div class="contact-method-card">
+                <div class="method-icon-box emerald-box">
+                  <i data-lucide="building"></i>
+                </div>
+                <div class="method-details">
+                  <span class="method-name">Institution</span>
+                  <a href="https://www.newtonschool.co/" target="_blank" rel="noopener noreferrer" class="method-value" title="Visit NST Pune">
+                    Newton School of Technology, Pune
+                  </a>
+                </div>
+                <a href="https://www.newtonschool.co/" target="_blank" rel="noopener noreferrer" class="btn-link-action" title="Visit NST Pune">
+                  <i data-lucide="arrow-up-right"></i>
+                </a>
+              </div>
+
+            </div>
+
+            <!-- Quick Interactive Message / Mailto Dispatcher -->
+            <div class="quick-compose-area">
+              <h4>Send a Direct Message</h4>
+              <form id="contact-form" class="compose-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="sender-name">Your Name</label>
+                    <input type="text" id="sender-name" placeholder="John Doe" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="sender-email">Your Email</label>
+                    <input type="email" id="sender-email" placeholder="john@example.com" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="sender-msg">Message</label>
+                  <textarea id="sender-msg" rows="3" placeholder="Hi Nitesh, I came across your portfolio and wanted to connect regarding..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full glow-btn">
+                  <i data-lucide="send"></i>
+                  <span>Send to niteshh.kumar@icloud.com</span>
+                </button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <span class="logo-symbol">NK</span>
+        <span class="footer-copy">© 2026 Nitesh Kumar • CSE (AI & ML) @ <a href="https://www.newtonschool.co/" target="_blank" rel="noopener noreferrer" class="link-inline">NST Pune</a></span>
+      </div>
+
+      <div class="footer-social-links">
+        <a href="https://www.linkedin.com/in/nitesh-kumar-nst/" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn">
+          <i data-lucide="linkedin"></i>
+        </a>
+        <a href="mailto:niteshh.kumar@icloud.com" class="social-btn" title="Email">
+          <i data-lucide="mail"></i>
+        </a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-btn" title="GitHub">
+          <i data-lucide="github"></i>
+        </a>
+        <a href="#hero" class="social-btn back-to-top" title="Back to top">
+          <i data-lucide="arrow-up"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Custom Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
